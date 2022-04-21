@@ -11,9 +11,11 @@ import {MaterialModule} from './material/material.module';
 import {MenuComponent} from './menu/menu.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-import { RolesComponent } from './roles/roles.component';
 import { AdministracionComponent } from './administracion/administracion.component';
 import { InventarioComponent } from './inventario/inventario.component';
+
+//Http client 
+import {HttpClientModule} from '@angular/common/http'; 
  
 @NgModule({
   declarations: [
@@ -21,7 +23,6 @@ import { InventarioComponent } from './inventario/inventario.component';
     MenuComponent,
     LandingPageComponent,
     UsuariosComponent,
-    RolesComponent,
     AdministracionComponent,
     InventarioComponent,
   ],
@@ -29,7 +30,8 @@ import { InventarioComponent } from './inventario/inventario.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
