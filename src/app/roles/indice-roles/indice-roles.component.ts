@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { rolesDTO } from '../roles';
 import { RolesService } from '../roles.service';
 
 @Component({
@@ -9,6 +10,9 @@ import { RolesService } from '../roles.service';
 export class IndiceRolesComponent implements OnInit {
 
   constructor(private rolesService : RolesService) { }
+
+  roles : rolesDTO[];
+  columnasAMostrar = ['nombre', 'descripcion'];
 
   ngOnInit(): void {
 
@@ -26,7 +30,8 @@ export class IndiceRolesComponent implements OnInit {
 
     this.rolesService.obtenerTodos().subscribe({
       next : (roles) => {
-        console.log(roles)
+
+        this.roles = roles;
       },
 
       error: (error) => {
@@ -35,5 +40,6 @@ export class IndiceRolesComponent implements OnInit {
     })
 
   }
+
 
 }

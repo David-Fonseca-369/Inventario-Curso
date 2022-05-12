@@ -10,10 +10,12 @@ import {MaterialModule} from './material/material.module';
 
 import {MenuComponent} from './menu/menu.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
 import { AdministracionComponent } from './administracion/administracion.component';
 import { InventarioComponent } from './inventario/inventario.component';
 
+import { IndiceRolesComponent } from './roles/indice-roles/indice-roles.component';
+
+import { IndiceUsuariosComponent } from './usuarios/indice-usuarios/indice-usuarios.component';
 //Http client 
 import {HttpClientModule} from '@angular/common/http'; 
  
@@ -22,9 +24,10 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     MenuComponent,
     LandingPageComponent,
-    UsuariosComponent,
     AdministracionComponent,
     InventarioComponent,
+    IndiceRolesComponent,
+    IndiceUsuariosComponent
   ],
   imports: [
     BrowserModule,
