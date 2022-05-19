@@ -1,5 +1,6 @@
 import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 import { usuarioDTO } from '../usuarios';
 import { UsuariosService } from '../usuarios.service';
 
@@ -20,9 +21,10 @@ export class IndiceUsuariosComponent implements OnInit {
   cantidadRegistrosAMostrar = 10;
 
 
+  columnasAMostrar = ['correo', 'rol', 'estado', 'opciones'];
 
   ngOnInit(): void {
-    this.cargarRegistrosPaginacion(1, 10);
+    this.cargarRegistrosPaginacion(this.paginaActual, this.cantidadRegistrosAMostrar);
   }
 
   cargarRegistrosPaginacion(pagina: number, cantidadElementosAMostrar){
@@ -40,6 +42,16 @@ export class IndiceUsuariosComponent implements OnInit {
         console.log(error)
       }
     })
+
+  }
+
+
+
+  actualizarPaginacion(datos: PageEvent){
+    this.paginaActual = datos.pageIndex + 1;
+    this.cantidadRegistrosAMostrar = datos.pageSize;
+
+    this.cargarRegistrosPaginacion(this.paginaActual, this.cantidadRegistrosAMostrar);
 
   }
 

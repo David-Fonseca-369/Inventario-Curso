@@ -5,3 +5,16 @@ export interface usuarioDTO{
     correo : string;
     estado : boolean;
 }
+export interface usuarioEditarDTO{
+    idUsuario : number;
+    idRol : number;
+    correo : string;
+}
+
+
+export interface usuarioCreacionDTO{
+    idRol: number;
+    correo  : string;    
+}
+
+

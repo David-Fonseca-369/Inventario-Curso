@@ -8,7 +8,9 @@ import {MatButtonModule} from '@angular/material/button';
 
 import {MatIconModule} from '@angular/material/icon';
 
-import {MatTableModule} from '@angular/material/table'
+import {MatTableModule} from '@angular/material/table';
+
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [],
@@ -16,7 +18,8 @@ import {MatTableModule} from '@angular/material/table'
     MatToolbarModule,
     MatButtonModule,
     MatIconModule, 
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   imports: [
     CommonModule
